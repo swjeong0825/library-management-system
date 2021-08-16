@@ -11,16 +11,15 @@ import java.time.LocalDateTime;
 public class BorrowingLogEntity {
     @Id
     private Integer id;
-
-    @ManyToOne
-    private UserEntity user;
-
-    @ManyToOne
-    private BookEntity book;
     private LocalDateTime createdDate;
     private LocalDateTime expectedReturnDate;
     private LocalDate actualReturnDate;
     private Integer datesOverdue;
+    @ManyToOne
+    private UserEntity user;
+    @ManyToOne
+    private BookEntity book;
+
 
     public Integer getId() {
         return id;

@@ -12,7 +12,6 @@ public class AuthorEntity {
     private String lastName;
     private Integer yearBorn;
     private Integer yearDeath;
-
     @ManyToMany
     private List<BookDefinitionEntity> writtenBooks;
 

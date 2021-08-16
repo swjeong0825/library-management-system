@@ -15,7 +15,6 @@ public class BookEntity {
     private LocalDateTime registeredDate;
     private LocalDateTime DeletedDate;
     private boolean availability;
-
     @ManyToOne
     private BookDefinitionEntity bookDef;
 

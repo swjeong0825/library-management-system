@@ -12,7 +12,6 @@ public class BookDefinitionEntity {
     private Integer yearPublished;
     private String category;
     private String language;
-
     @ManyToMany
     private List<AuthorEntity> authors;
 

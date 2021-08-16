@@ -10,14 +10,11 @@ import java.time.LocalDateTime;
 public class ViolationLogEntity {
     @Id
     private Integer id;
-
+    private LocalDateTime createdDate;
     @ManyToOne
     private UserEntity user;
-
     @ManyToOne
     private ViolationEntity violation;
-
-    private LocalDateTime createdDate;
 
     public Integer getId() {
         return id;

@@ -7,6 +7,14 @@ import java.util.List;
 
 @Entity
 public class ViolationEntity {
+    @Id
+    private Integer id;
+    private String title;
+    private String penalty;
+
+    @OneToMany
+    private List<ViolationLogEntity> violationLogs;
+
     public Integer getId() {
         return id;
     }
@@ -39,13 +47,7 @@ public class ViolationEntity {
         this.violationLogs = violationLogs;
     }
 
-    @Id
-    private Integer id;
-    private String title;
-    private String penalty;
 
-    @OneToMany
-    private List<ViolationLogEntity> violationLogs;
 
 
 }

@@ -10,6 +10,22 @@ import java.util.List;
 
 @Entity
 public class UserEntity {
+    @Id
+    private Integer id;
+    private String username;
+    private String password;
+    private String email;
+    private Integer borrowLimit;
+    private LocalDateTime registeredDate;
+    private LocalDateTime deletedDate;
+
+    @OneToMany
+    private List<BorrowingLogEntity> borrowingLogs;
+
+    @OneToMany
+    private List<ViolationLogEntity> violationLogs;
+
+
     public Integer getId() {
         return id;
     }
@@ -82,19 +98,5 @@ public class UserEntity {
         this.violationLogs = violationLogs;
     }
 
-    @Id
-    private Integer id;
-    private String username;
-    private String password;
-    private String email;
-    private Integer borrowLimit;
-    private LocalDateTime registeredDate;
-    private LocalDateTime deletedDate;
-
-    @OneToMany
-    private List<BorrowingLogEntity> borrowingLogs;
-
-    @OneToMany
-    private List<ViolationLogEntity> violationLogs;
 
 }
