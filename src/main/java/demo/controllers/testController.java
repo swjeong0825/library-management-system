@@ -1,6 +1,6 @@
 package demo.controllers;
 
-import demo.entities.TestEntity;
+import demo.entities.Test;
 import demo.services.test.TestServiceGet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,7 +23,7 @@ public class testController {
     }
 
     @GetMapping(value ="/test")
-    List<TestEntity> getAllTests(){
+    List<Test> getAllTests(){
         return testServiceGet.getTests();
 //        return 1;
     }

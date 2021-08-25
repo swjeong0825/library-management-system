@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-public class AuthorEntity {
+public class Author {
     @Id
     private Integer id;
     private String firstName;
@@ -13,7 +13,7 @@ public class AuthorEntity {
     private Integer yearBorn;
     private Integer yearDeath;
     @ManyToMany
-    private List<BookDefinitionEntity> writtenBooks;
+    private List<BookDefinition> writtenBooks;
 
     public Integer getId() {
         return id;
@@ -63,11 +63,11 @@ public class AuthorEntity {
         this.yearDeath = yearDeath;
     }
 
-    public List<BookDefinitionEntity> getWrittenBooks() {
+    public List<BookDefinition> getWrittenBooks() {
         return writtenBooks;
     }
 
-    public void setWrittenBooks(List<BookDefinitionEntity> writtenBooks) {
+    public void setWrittenBooks(List<BookDefinition> writtenBooks) {
         this.writtenBooks = writtenBooks;
     }
 }

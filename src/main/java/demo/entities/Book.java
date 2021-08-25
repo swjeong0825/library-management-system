@@ -6,14 +6,14 @@ import javax.persistence.ManyToOne;
 import java.time.LocalDateTime;
 
 @Entity
-public class BookEntity {
+public class Book {
     @Id
     private Integer id;
     private LocalDateTime registeredDate;
     private LocalDateTime DeletedDate;
     private boolean availability;
     @ManyToOne
-    private BookDefinitionEntity bookDef;
+    private BookDefinition bookDef;
 
     public Integer getId() {
         return id;
@@ -47,11 +47,11 @@ public class BookEntity {
         this.availability = availability;
     }
 
-    public BookDefinitionEntity getBookDef() {
+    public BookDefinition getBookDef() {
         return bookDef;
     }
 
-    public void setBookDef(BookDefinitionEntity bookDef) {
+    public void setBookDef(BookDefinition bookDef) {
         this.bookDef = bookDef;
     }
 }

@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
-public class BorrowingLogEntity {
+public class BorrowingLog {
     @Id
     private Integer id;
     private LocalDateTime createdDate;
@@ -15,9 +15,9 @@ public class BorrowingLogEntity {
     private LocalDate actualReturnDate;
     private Integer datesOverdue;
     @ManyToOne
-    private UserEntity user;
+    private User user;
     @ManyToOne
-    private BookEntity book;
+    private Book book;
 
 
     public Integer getId() {
@@ -28,19 +28,19 @@ public class BorrowingLogEntity {
         this.id = id;
     }
 
-    public UserEntity getUser() {
+    public User getUser() {
         return user;
     }
 
-    public void setUser(UserEntity user) {
+    public void setUser(User user) {
         this.user = user;
     }
 
-    public BookEntity getBook() {
+    public Book getBook() {
         return book;
     }
 
-    public void setBook(BookEntity book) {
+    public void setBook(Book book) {
         this.book = book;
     }
 

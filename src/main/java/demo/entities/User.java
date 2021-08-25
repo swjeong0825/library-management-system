@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
-public class UserEntity {
+public class User {
     @Id
     private Integer id;
     private String username;
@@ -18,10 +18,7 @@ public class UserEntity {
     private LocalDateTime deletedDate;
 
     @OneToMany
-    private List<BorrowingLogEntity> borrowingLogs;
-
-    @OneToMany
-    private List<ViolationLogEntity> violationLogs;
+    private List<BorrowingLog> borrowingLogs;
 
 
     public Integer getId() {
@@ -80,21 +77,12 @@ public class UserEntity {
         this.deletedDate = deletedDate;
     }
 
-    public List<BorrowingLogEntity> getBorrowingLogs() {
+    public List<BorrowingLog> getBorrowingLogs() {
         return borrowingLogs;
     }
 
-    public void setBorrowingLogs(List<BorrowingLogEntity> borrowingLogs) {
+    public void setBorrowingLogs(List<BorrowingLog> borrowingLogs) {
         this.borrowingLogs = borrowingLogs;
     }
-
-    public List<ViolationLogEntity> getViolationLogs() {
-        return violationLogs;
-    }
-
-    public void setViolationLogs(List<ViolationLogEntity> violationLogs) {
-        this.violationLogs = violationLogs;
-    }
-
 
 }

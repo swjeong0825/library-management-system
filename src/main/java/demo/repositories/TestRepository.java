@@ -1,12 +1,12 @@
 package demo.repositories;
 
-import demo.entities.TestEntity;
+import demo.entities.Test;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface TestRepository extends CrudRepository<TestEntity, Integer> {
+public interface TestRepository extends CrudRepository<Test, Integer> {
 
-    Iterable<TestEntity> findByBody(String body);
+    Iterable<Test> findByBody(String body);
 }
 

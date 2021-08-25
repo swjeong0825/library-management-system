@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-public class BookDefinitionEntity {
+public class BookDefinition {
 
     @Id
     private Integer id;
@@ -13,17 +13,15 @@ public class BookDefinitionEntity {
     private String category;
     private String language;
     @ManyToMany
-    private List<AuthorEntity> authors;
+    private List<Author> authors;
 
-    public List<AuthorEntity> getAuthors() {
+    public List<Author> getAuthors() {
         return authors;
     }
 
-    public void setAuthors(List<AuthorEntity> authors) {
+    public void setAuthors(List<Author> authors) {
         this.authors = authors;
     }
-
-
 
     public Integer getId() {
         return id;
